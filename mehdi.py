@@ -24,7 +24,7 @@ def predict_score(features):
     return np.random.randint(0, 100)  
 
 # Sidebar for navigation
-st.sidebar.title(" Ai experience predicter 🤖")
+st.sidebar.title(" Ai experience predictor 🤖")
 page = st.sidebar.radio("Select Page:", ["Home", "Predict"])
 
 if page == "Home":
@@ -34,6 +34,7 @@ if page == "Home":
     if st.button("Submit"):
         st.success(f"Thank you, {name}! Your information has been submitted.")
         st.balloons()
+        
 
 if page == "Predict":
     st.title("Predict Training Score")
