@@ -11,7 +11,12 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
-df = pd.read_csv(r"C:\Users\HANZALAH\Downloads\Uncleaned_employees_final_dataset (1).csv")
+import kagglehub
+
+# Download latest version
+df = kagglehub.dataset_download("sanjanchaudhari/employees-performance-for-hr-analytics")
+
+print("Path to dataset files:", df)
 
 
 def predict_score(features):
